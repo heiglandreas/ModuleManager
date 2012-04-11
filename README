@@ -1,0 +1,16 @@
+-------------
+ModuleManager
+-------------
+
+This module provides a convenient web-frontend to manage the modules of your
+ ZF2-Application.
+
+Usage:
+------
+
+1. Upload the module into your ZF2-Application
+2. In your application.conf-file add the Module to the list of modules
+3. Go to http<s>://<yourserver>/<yourWebPath>/mm
+
+From now on you can upload, remove, install, uninstall, activate and deactivate
+your modules via this WebFrontend.
