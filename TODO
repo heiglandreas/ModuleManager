@@ -1,0 +1,15 @@
+----
+TODO
+----
+
+The following issues still have to be resolved. Not necessarily in this
+order though.
+
+* Keep order of Modules from initial setup and add new modules below
+* Re-order modules via the UI
+* Create missing folders before creating the symlinks
+* Upload new Modules in either ZIP or TGZ-form
+* completely remove modules
+* Edit config files of a module
+* Refactor
+* ...
