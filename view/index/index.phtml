@@ -1,0 +1,42 @@
+<?php
+$this->headTitle('ModuleManager');
+$this->headLink()->appendStylesheet('/css/ModuleManager/style.css');
+?>
+<table class="moduleManager">
+    <caption>Available modules</caption>
+    <thead>
+        <tr>
+            <th>Module</th>
+            <th>&nbsp;</th>
+            <th>&nbsp;</th>
+        </tr>
+    <tbody>
+    <?php foreach ( $this->modules as $module ) { ?>
+        <tr>
+            <td><?php echo $module->getName();?></td>
+            <td>
+                <?php if ( $module->isActive() ):?>
+                <a href="<?php echo $this->url('mm/deactivate', array('module'=>$module->getName()) );?>">
+                    Deactivate
+                </a>
+                <?php else:?>
+                <a href="<?php echo $this->url('mm/activate', array('module'=>$module->getName()) );?>">
+                    Activate
+                </a>
+                <?php endif; ?>
+            <td>
+            <td>
+                <?php if ( $module->isInstalled() ):?>
+                <a href="<?php echo $this->url('mm/uninstall', array('module'=>$module->getName()) );?>">
+                    Uninstall
+                </a>
+                <?php else:?>
+                <a href="<?php echo $this->url('mm/install', array('module'=>$module->getName()) );?>">
+                    Install
+                </a>
+                <?php endif; ?>
+            <td>
+        </tr>
+    <?php } ?>
+    </tbody>
+</table>
